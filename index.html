@@ -3,20 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1/125 | Объединение фотографов и дизайнеров</title>
+  <title>Медиа Центр | Объединение фотографов и дизайнеров</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- ДОБАВЛЕНО НА ЭТАПЕ 3: Скрытый чекбокс для темы -->
+  <input type="checkbox" id="theme-toggle">
+
   <div class="wrapper">
     <!-- ШАПКА -->
     <header>
       <div class="container nav-wrap">
-        <a href="#" class="logo">1/125</a>
+        <a href="#" class="logo">Медиа Центр</a>
         <nav>
           <ul>
             <li><a href="#about">О нас</a></li>
             <li><a href="#form">Контакты</a></li>
             <li><a href="#faq">FAQ</a></li>
+            <!-- ДОБАВЛЕНО НА ЭТАПЕ 3: Кнопка переключения темы -->
+            <li>
+              <label for="theme-toggle" class="theme-label" tabindex="0">Сменить тему</label>
+            </li>
           </ul>
         </nav>
       </div>
