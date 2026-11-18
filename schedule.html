@@ -7,9 +7,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Скрытый чекбокс для переключения темы -->
   <input type="checkbox" id="theme-toggle">
 
   <div class="wrapper">
+    <!-- ШАПКА -->
     <header>
       <div class="container nav-wrap">
         <a href="index.html" class="logo">Медиа Центр</a>
@@ -29,38 +31,101 @@
       <section class="section container">
         <h2 class="section-title">Расписание мероприятий</h2>
         
-        <!-- Здесь будет фильтр (следующий коммит) -->
+        <!-- МЕНЮ ФИЛЬТРОВ (Этап 7) -->
+        <div class="filter-menu">
+          <input type="radio" name="filter" id="f-all" class="filter-radio" checked>
+          <label for="f-all" class="filter-label">Все</label>
 
+          <input type="radio" name="filter" id="f-photo" class="filter-radio">
+          <label for="f-photo" class="filter-label">Фотография</label>
+
+          <input type="radio" name="filter" id="f-design" class="filter-radio">
+          <label for="f-design" class="filter-label">Дизайн</label>
+
+          <input type="radio" name="filter" id="f-video" class="filter-radio">
+          <label for="f-video" class="filter-label">Видео</label>
+        </div>
+
+        <!-- СЕТКА КАРТОЧЕК -->
         <div class="grid">
+          <!-- Карточка 1 -->
           <article class="card photo">
             <h3>Мастер-класс: Свет в портрете</h3>
             <p><strong>15 Октября, 18:00</strong></p>
             <p>Разбираем схемы освещения.</p>
+            <a href="#modal1" class="btn" style="text-decoration:none; text-align:center; display:inline-block; margin-top:10px;">Подробнее</a>
           </article>
+
+          <!-- Карточка 2 -->
           <article class="card design">
             <h3>Воркшоп: UI/UX в вебе</h3>
             <p><strong>17 Октября, 16:00</strong></p>
             <p>Создаем прототипы в Figma.</p>
+            <a href="#modal2" class="btn" style="text-decoration:none; text-align:center; display:inline-block; margin-top:10px;">Подробнее</a>
           </article>
+
+          <!-- Карточка 3 -->
           <article class="card video">
             <h3>Семинар: Монтаж</h3>
             <p><strong>20 Октября, 19:00</strong></p>
             <p>Изучаем DaVinci Resolve.</p>
+            <a href="#modal3" class="btn" style="text-decoration:none; text-align:center; display:inline-block; margin-top:10px;">Подробнее</a>
           </article>
+
+          <!-- Карточка 4 -->
           <article class="card photo">
             <h3>Фотопрогулка</h3>
             <p><strong>22 Октября, 12:00</strong></p>
             <p>Практика уличной съемки.</p>
+            <a href="#modal4" class="btn" style="text-decoration:none; text-align:center; display:inline-block; margin-top:10px;">Подробнее</a>
           </article>
         </div>
       </section>
     </main>
 
+    <!-- ПОДВАЛ -->
     <footer>
       <div class="container">
         <p>&copy; 2024 Медиа Центр.</p>
       </div>
     </footer>
+  </div> <!-- Закрытие .wrapper -->
+
+  <!-- МОДАЛЬНЫЕ ОКНА (Этап 8) -->
+  <div id="modal1" class="modal">
+    <div class="modal-box">
+      <a href="#" class="close" aria-label="Закрыть">&times;</a>
+      <h3>Свет в портрете</h3>
+      <p>Приносите камеры и блокноты. Разберем классические схемы освещения и современные трендовые решения.</p>
+      <p><strong>Спикер:</strong> Анна Смирнова</p>
+    </div>
   </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-box">
+      <a href="#" class="close" aria-label="Закрыть">&times;</a>
+      <h3>UI/UX в вебе</h3>
+      <p>Поговорим о юзабилити и создании вайрфреймов. Практическая часть — в Figma.</p>
+      <p><strong>Спикер:</strong> Дмитрий Козлов</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-box">
+      <a href="#" class="close" aria-label="Закрыть">&times;</a>
+      <h3>Семинар: Монтаж</h3>
+      <p>Учимся работать с LUT-ами и кривыми в DaVinci Resolve.</p>
+      <p><strong>Спикер:</strong> Максим Орлов</p>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-box">
+      <a href="#" class="close" aria-label="Закрыть">&times;</a>
+      <h3>Фотопрогулка</h3>
+      <p>Сбор у главного корпуса. Ищем интересные ракурсы и ловим естественный свет.</p>
+    </div>
+  </div>
+
 </body>
 </html>
