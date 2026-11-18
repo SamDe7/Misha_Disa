@@ -8,6 +8,16 @@
   --border: #cccccc;
 }
 
+/* --- ДОБАВЛЕНО НА ЭТАПЕ 3: Темная тема --- */
+#theme-toggle:checked ~ .wrapper {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --primary: #ce93d8;
+  --secondary: #4a148c;
+  --card-bg: #1e1e1e;
+  --border: #444444;
+}
+
 /* --- 2. Базовые стили --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -36,6 +46,19 @@ nav ul { list-style: none; display: flex; gap: 20px; }
 nav a { color: var(--text); text-decoration: none; font-weight: bold; }
 nav a:hover { color: var(--primary); }
 
+/* --- ДОБАВЛЕНО НА ЭТАПЕ 3: Кнопка темы --- */
+#theme-toggle { display: none; }
+.theme-label {
+  background: var(--primary);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
 /* --- 4. Hero-секция --- */
 .hero { background: var(--secondary); padding: 60px 20px; text-align: center; }
 .hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); color: var(--primary); margin-bottom: 15px; }
@@ -62,6 +85,11 @@ summary { padding: 15px 20px; cursor: pointer; font-weight: bold; list-style: no
 summary::-webkit-details-marker { display: none; }
 .faq-content { padding: 0 20px 20px; border-top: 1px solid var(--border); padding-top: 15px; }
 
+/* --- ДОБАВЛЕНО НА ЭТАПЕ 3: Кастомный маркер аккордеона --- */
+summary { display: flex; justify-content: space-between; align-items: center; }
+summary::after { content: '+'; font-size: 1.4rem; color: var(--primary); font-weight: bold; }
+details[open] summary::after { content: '−'; }
+
 /* --- 8. Подвал --- */
 footer { background: var(--card-bg); text-align: center; padding: 20px; margin-top: auto; border-top: 1px solid var(--border); }
 
@@ -70,3 +98,6 @@ footer { background: var(--card-bg); text-align: center; padding: 20px; margin-t
   .nav-wrap { flex-direction: column; gap: 15px; }
   nav ul { flex-wrap: wrap; justify-content: center; }
 }
+
+/* --- ДОБАВЛЕНО НА ЭТАПЕ 3: Доступность --- */
+a:focus-visible, label:focus-visible { outline: 3px solid #ff9800; outline-offset: 2px; }
