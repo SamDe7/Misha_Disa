@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Медиа Центр | Расписание</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle">
+
+  <div class="wrapper">
+    <header>
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo">Медиа Центр</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="schedule.html">Расписание</a></li>
+            <li>
+              <label for="theme-toggle" class="theme-label" tabindex="0">Сменить тему</label>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section container">
+        <h2 class="section-title">Расписание мероприятий</h2>
+        
+        <!-- Здесь будет фильтр (следующий коммит) -->
+
+        <div class="grid">
+          <article class="card photo">
+            <h3>Мастер-класс: Свет в портрете</h3>
+            <p><strong>15 Октября, 18:00</strong></p>
+            <p>Разбираем схемы освещения.</p>
+          </article>
+          <article class="card design">
+            <h3>Воркшоп: UI/UX в вебе</h3>
+            <p><strong>17 Октября, 16:00</strong></p>
+            <p>Создаем прототипы в Figma.</p>
+          </article>
+          <article class="card video">
+            <h3>Семинар: Монтаж</h3>
+            <p><strong>20 Октября, 19:00</strong></p>
+            <p>Изучаем DaVinci Resolve.</p>
+          </article>
+          <article class="card photo">
+            <h3>Фотопрогулка</h3>
+            <p><strong>22 Октября, 12:00</strong></p>
+            <p>Практика уличной съемки.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Медиа Центр.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
