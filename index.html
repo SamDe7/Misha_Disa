@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Медиа Центр | Объединение фотографов и дизайнеров</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- ШАПКА -->
+    <header>
+      <div class="container nav-wrap">
+        <a href="#" class="logo">Медиа Центр</a>
+        <nav>
+          <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#form">Контакты</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ГЛАВНЫЙ БАННЕР -->
+      <section class="hero">
+        <div class="container">
+          <h1>Творческое объединение креаторов</h1>
+          <p>Мы объединяем фотографов, дизайнеров и видеографов для создания крутых проектов и обмена опытом.</p>
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ "О КЛУБЕ" -->
+      <section id="about" class="section container">
+        <h2 class="section-title">Чем мы занимаемся</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Фотография</h3>
+            <p>Проводим мастер-классы по свету, композиции и репортажной съемке.</p>
+          </article>
+          <article class="card">
+            <h3>Дизайн</h3>
+            <p>Создаем айдентику, плакаты и интерфейсы. Разбираем тренды веб-дизайна.</p>
+          </article>
+          <article class="card">
+            <h3>Видео</h3>
+            <p>Снимаем короткометражки и клипы. Изучаем монтаж и цветокоррекцию.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ "ФОРМА ОБРАТНОЙ СВЯЗИ" -->
+      <section id="form" class="section container">
+        <h2 class="section-title">Стать участником</h2>
+        <form class="form-box">
+          <div class="form-group">
+            <label for="user-name">Ваше имя *</label>
+            <input type="text" id="user-name" name="name" required minlength="2" placeholder="Иван Иванов">
+          </div>
+          <div class="form-group">
+            <label for="user-email">Email *</label>
+            <input type="email" id="user-email" name="email" required placeholder="example@mail.com">
+          </div>
+          <div class="form-group">
+            <label for="user-phone">Телефон</label>
+            <input type="tel" id="user-phone" name="phone" pattern="[0-9]{11}" placeholder="89001234567">
+          </div>
+          <div class="form-group">
+            <label for="user-message">Почему хотите к нам? *</label>
+            <textarea id="user-message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn">Отправить заявку</button>
+        </form>
+      </section>
+
+      <!-- СЕКЦИЯ "FAQ" -->
+      <section id="faq" class="section container">
+        <h2 class="section-title">Частые вопросы</h2>
+        <details>
+          <summary>Как проходит отбор в клуб?</summary>
+          <div class="faq-content"><p>Заполните форму и прикрепите портфолио.</p></div>
+        </details>
+        <details>
+          <summary>Это бесплатно?</summary>
+          <div class="faq-content"><p>Да, участие и мастер-классы бесплатны.</p></div>
+        </details>
+      </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Медиа Центр.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
