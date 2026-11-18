@@ -26,7 +26,6 @@ body {
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  /* ДОБАВЛЕНО НА ЭТАПЕ 4: Плавная смена темы */
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -75,10 +74,8 @@ nav a:hover { color: var(--primary); }
   border: 1px solid var(--border); 
   border-radius: 8px; 
   padding: 25px; 
-  /* ДОБАВЛЕНО НА ЭТАПЕ 4: Плавность карточек */
   transition: transform 0.2s, box-shadow 0.2s;
 }
-/* ДОБАВЛЕНО НА ЭТАПЕ 4: Hover карточек */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -95,13 +92,11 @@ input, textarea {
   border-radius: 4px; 
   font-family: inherit; 
   font-size: 1rem; 
-  /* ДОБАВЛЕНО НА ЭТАПЕ 4: Фон инпутов из переменных */
   background: var(--bg);
   color: var(--text);
 }
 .btn { width: 100%; padding: 12px; background: var(--primary); color: #fff; border: none; border-radius: 4px; font-size: 1.1rem; font-weight: bold; cursor: pointer; }
 
-/* --- ДОБАВЛЕНО НА ЭТАПЕ 4: Валидация формы --- */
 input:focus:invalid, textarea:focus:invalid {
   border-color: #e53935;
   outline: none;
@@ -127,10 +122,19 @@ details[open] summary::after { content: '−'; }
 /* --- 8. Подвал --- */
 footer { background: var(--card-bg); text-align: center; padding: 20px; margin-top: auto; border-top: 1px solid var(--border); }
 
-/* --- 9. Адаптивность --- */
+/* --- 9. Адаптивность (768px) --- */
 @media (max-width: 768px) {
   .nav-wrap { flex-direction: column; gap: 15px; }
   nav ul { flex-wrap: wrap; justify-content: center; }
+}
+
+/* --- ДОБАВЛЕНО НА ЭТАПЕ 5: Адаптивность под маленькие экраны (360px) --- */
+@media (max-width: 480px) {
+  .hero { padding: 40px 15px; }
+  .form-box { padding: 20px 15px; }
+  .section { padding: 30px 0; }
+  .section-title { font-size: 1.5rem; }
+  .card { padding: 15px; }
 }
 
 /* --- Доступность --- */
